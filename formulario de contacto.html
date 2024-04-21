@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Contacto</title>
+  <link rel="stylesheet" href="formulario de contacto.css">
+</head>
+<body>
+  <h1>Formulario de Contacto</h1>
+  <form id="contactForm">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="subject">Asunto:</label>
+    <select id="subject" name="subject" required>
+      <option value="" disabled selected>Selecciona un asunto</option>
+      <option value="general">Consulta general</option>
+      <option value="soporte">Soporte técnico</option>
+      <option value="otro">Otro</option>
+    </select>
+
+    <label>¿Cómo nos conociste?</label>
+    <label><input type="radio" name="source" value="web" required> Sitio web</label>
+    <label><input type="radio" name="source" value="social"> Redes sociales</label>
+    <label><input type="radio" name="source" value="other"> Otro</label>
+
+    <label><input type="checkbox" id="newsletter" name="newsletter"> Suscribirme al boletín</label>
+
+    <label for="message">Mensaje:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <img src="imagen.jpg" alt="Imagen de muestra">
+
+    <input type="submit" value="Enviar">
+  </form>
+
+  <script src="validacion.js"></script>
+</body>
+</html>

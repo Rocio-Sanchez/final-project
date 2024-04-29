@@ -1,4 +1,4 @@
-/*Paleta de Colores*/
+/* Paleta de Colores */
 :root {
     --color_primario: #607D8B;
     --color_primario_oscuro: #455A64;
@@ -12,29 +12,34 @@
     --padding_left_right: 2rem;
     --ancho_maximo: 1200px;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: var(--color_divisor);
+
+body {
+    background: linear-gradient(to right, #455A64, #607D8B, #CFD8DC, #BDBDBD, #795548);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
 }
-ol,ul{
+
+ol, ul {
     list-style: none;
 }
 
-/*Estilo menu principal*/
-.header{
+/* Estilo menu principal */
+.header {
     height: var(--altura_header);
     background: linear-gradient(to right, #455A64, #607D8B, #CFD8DC, #BDBDBD, #795548);
     padding-bottom: 20px;
 }
-.logo{
+
+.logo {
     width: 100px;
     display: flex;
     flex-direction: row;
@@ -42,6 +47,7 @@ ol,ul{
     align-items: center;
     flex-wrap: wrap;
 }
+
 .navbar {
     height: 100%;
     display: flex;
@@ -54,12 +60,15 @@ ol,ul{
     padding: 0 var(--padding_left_right);
     z-index: 1;
 }
-.menu_hamburguesa{
+
+.menu_hamburguesa {
     display: none;
 }
+
 .menu_hamburguesa:checked + .ul_links {
     height: calc(100vh - var(--altura_header));
 }
+
 .logo {
     color: var(--texto_iconos)
 }
@@ -91,6 +100,7 @@ ol,ul{
     color: var(--texto_primario);
     font-weight: bold;
 }
+
 @media (min-width:768px){
     .label_hamburguesa{
         display:none;
@@ -111,6 +121,7 @@ ol,ul{
         background-color: #8057497c;
     }
 }
+
 .slider{
     padding: 20px;
     width: 1200px;
@@ -119,22 +130,26 @@ ol,ul{
     overflow: hidden;
     z-index: -1;
 }
+
 .slider_img{
     height: 100vh;
     width: 1200px;
     padding: 0;
 }
+
 .slider ul{
     display: flex;
     padding: 0;
     width: 400%;
     animation: slide 20s infinite alternate ease-in-out;
 }
+
 .slider li{
     width: 100%;
     list-style: none;
     position: relative;
 }
+
 @keyframes slide {
     0%{margin-left: 0;}
     20%{margin-left: 0;}
@@ -148,6 +163,7 @@ ol,ul{
     75%{margin-left: -300%;}
     100%{margin-left: -300%;}
 }
+
 @media (max-width: 1200px){
     body{
         padding: 10px;
@@ -156,7 +172,8 @@ ol,ul{
         width: 100%;
     }
 }
-/*<!--Pie de la Pagina-->*/
+
+/* Pie de la Página */
 .footer {
     background: linear-gradient(to right, #455A64, #607D8B, #CFD8DC, #BDBDBD, #795548);
     padding: 20px;
@@ -177,4 +194,47 @@ ol,ul{
     color: var(--texto_primario);
     text-decoration: none;
     font-size: 14px;
+}
+
+/* Estilos para el formulario de contacto */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+    border-radius: 15px; /* Ajusta el valor según el grado de curvatura que desees */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea,
+select {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

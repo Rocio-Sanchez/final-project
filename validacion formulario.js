@@ -8,6 +8,8 @@ form.addEventListener('submit', function(event) {
 
   // Validar campos obligatorios
   const nombre = document.getElementById('name').value.trim();
+  const apellido = document.getElementById('last name').value.trim();
+  const telefono = document.getElementById('phone').value.trim();
   const email = document.getElementById('email').value.trim();
   const asunto = document.getElementById('subject').value;
   const mensaje = document.getElementById('message').value.trim();
